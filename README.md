@@ -1,5 +1,4 @@
-##
-Federated Split Learning with KMeans Defense
+# Federated Split Learning with KMeans Defense
 This project demonstrates a federated learning system using Split Learning. In this setup, each client processes part of an input image and sends intermediate embeddings to a central server, which completes the classification task. While split learning improves communication efficiency and preserves data privacy, it remains vulnerable to model poisoning attacks. To address this, we implement a KMeans-based defense mechanism to detect and mitigate poisoned client contributions.
 # Overview
 We use the MNIST dataset for handwritten digit recognition. Each input image is 28x28 pixels and grayscale. Instead of giving full images to every client, we vertically split each image into 5 equal parts, and assign each part to a different client. Thus, every client only sees a slice of the image (approximately 5–6 pixels in width).
